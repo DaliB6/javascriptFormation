@@ -56,6 +56,23 @@ main>* {
     overflow-y: auto;
 }
 
+#js-loaded {
+
+    color: white;
+    font-weight: 900;
+    font-size: xx-large;
+    text-decoration: underline;
+    text-align: center;
+    padding: 10px;
+    background-color: brown;
+}
+
+#js-loaded.loaded {
+    
+    background-color: greenyellow;
+
+}
+
 @media print {
 
     footer {
