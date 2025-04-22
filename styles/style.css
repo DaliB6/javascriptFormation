@@ -1,0 +1,35 @@
+body {
+    color: blue ;
+}
+
+#title {
+    color : tomato ;
+    font-weight: 900;
+    font-size: xx-large;
+    text-shadow: 10px 10px 15px grey;
+    text-decoration:underline darkgrey;
+}
+
+
+#dot {
+    color: black;
+}
+
+#js {
+    color: skyblue;
+    font-style: italic;
+}
+
+header img {
+    height: 32px ; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    display: flex;
+    flex-direction: column;
+}
