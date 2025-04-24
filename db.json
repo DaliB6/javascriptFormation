@@ -231,6 +231,36 @@
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 15
+    },
+    {
+      "titre": "",
+      "text": "1111111",
+      "x": 100,
+      "y": 20,
+      "fontWeight": "500",
+      "fontSize": 100,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#000000",
+      "frameSizeX": 0,
+      "frameSizeY": 0,
+      "id": 16
+    },
+    {
+      "id": 17,
+      "titre": "",
+      "text": "5555 2255",
+      "x": 100,
+      "y": 20,
+      "fontWeight": "500",
+      "fontSize": 100,
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "color": "#000000",
+      "frameSizeX": 0,
+      "frameSizeY": 0
     }
   ]
 }

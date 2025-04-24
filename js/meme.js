@@ -10,9 +10,10 @@ class Meme {
     x= 100;
     y= 20;
     fontWeight= '500';
+    fontSize = 100;
     underline= false;
     italic= false;
-    imageId= 0;
+    imageId= -1;
     color= '#000000';
     frameSizeX= 0;
     frameSizeY= 0
@@ -26,6 +27,11 @@ class Meme {
             method : this.id !== undefined ? 'PUT' : 'POST',
             headers : {"Content-Type":"application/json"},
             body: JSON.stringify(this)
+        })
+        .then(r => r.json())
+        .then( m => {
+            Object.assign(this,m);
+            return this;
         });
     }
 
