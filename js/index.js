@@ -10,6 +10,13 @@ function loadJs() {
     jsLoadedElement.style.color = 'blue';
     jsLoadedElement.remove();
 
+    document
+    .querySelector("#navbarNav > ul > li:nth-child(2) > a")
+    .addEventListener("click", (evt) => {
+        evt.preventDefault();
+      loadEditorView();
+    });
+
 }
 
 
