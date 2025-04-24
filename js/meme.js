@@ -1,7 +1,7 @@
 
 const REST_SERVER = 'http://localhost:5679' ;
 
-class Meme {
+export class Meme {
     
     static #resourcePath = '/memes'
     id= undefined;

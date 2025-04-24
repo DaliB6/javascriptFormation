@@ -1,3 +1,7 @@
+import { images } from "./images.js";
+import { Meme } from "./meme.js";
+
+
 /**
  * chargement du combo box du formulaire
  * @param {Images} mesImages
@@ -92,7 +96,7 @@ function redrawSVG(meme, node) {
   console.log(img);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+export  function  loadEditor() {
   editorSVGNode = document.querySelector("#editor svg");
   imageSvgREFNode = editorSVGNode.querySelector("image");
   
@@ -102,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadFromData(currentMeme);
     redrawSVG(currentMeme, editorSVGNode);
   } );
-});
+};
 
 let currentMeme = new Meme();
 let editorSVGNode = undefined;

@@ -7,7 +7,7 @@ const REST_ADR = 'http://localhost:5679'
 
 class Images extends Array {
 
-    #ressourcePath;
+    #ressourcePath ;
      /**
      * @type Promise<Images>
      */
@@ -41,7 +41,7 @@ class Images extends Array {
     loadResources(){
         
         if(undefined === this.#loadPromise ){
-            this.#loadPromise = fetch(REST_ADR+ this.#ressourcePath)
+            this.#loadPromise = fetch(REST_ADR + this.#ressourcePath)
             .then(r=>r.json())
             .then(arr=>{
                 this.splice(0);
@@ -55,7 +55,7 @@ class Images extends Array {
     }
 }
 
-const images = new Images();
+export const images = new Images();
 images.loadResources();
 
 
