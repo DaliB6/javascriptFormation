@@ -1,5 +1,5 @@
 
-const REST_ADR = 'http://localhost:5679' ;
+const REST_SERVER = 'http://localhost:5679' ;
 
 class Meme {
     
@@ -21,7 +21,7 @@ class Meme {
 
 
     save(){
-        const adr = `${REST_ADR}${Meme.#resourcePath}${this.id !== undefined ? '/'+this.id : ''}`;
+        const adr = `${REST_SERVER}${Meme.#resourcePath}${this.id !== undefined ? '/'+this.id : ''}`;
         fetch(adr,{
             method : this.id !== undefined ? 'PUT' : 'POST',
             headers : {"Content-Type":"application/json"},

@@ -8,6 +8,10 @@ const REST_ADR = 'http://localhost:5679'
 class Images extends Array {
 
     #ressourcePath;
+     /**
+     * @type Promise<Images>
+     */
+    #loadPromise = undefined;
     /**
      * 
      * @param {string} ressourcePath chemin dans le REST des images 
@@ -17,21 +21,37 @@ class Images extends Array {
         this.#ressourcePath = ressourcePath ;
 
     }
+   
+    get promiseImages(){
+        if( undefined === this.#loadPromise){
+            this.loadResources() ;
+        }
+        return this.#loadPromise;
+    
+    }
 
+    set promiseImages(value){
+        
+        this.#loadPromise = value ;
+
+    }
     /**
      * 
      */
     loadResources(){
-        console.time('fetch')
-        fetch(REST_ADR+ this.#ressourcePath)
-        .then(r=>r.json())
-        .then(arr=>{
-            this.splice(0);
-            this.push(...arr);
-            console.table(this);
-            console.timeEnd('fetch');
-         
-        });
+        
+        if(undefined === this.#loadPromise ){
+            this.#loadPromise = fetch(REST_ADR+ this.#ressourcePath)
+            .then(r=>r.json())
+            .then(arr=>{
+                this.splice(0);
+                this.push(...arr);
+                return this;
+            
+            })
+            return this.#loadPromise ;
+        }
+        
     }
 }
 
