@@ -17,9 +17,10 @@ function loadJs() {
       loadEditorView();
     });
 
+
 }
 
-
+loadListView();
 function loadHomeView(){
   fetch('/vues/home.html')
   .then(r => r.text())
@@ -33,6 +34,15 @@ function loadEditorView(){
     document.querySelector("main").innerHTML = r;
     loadEditor();
   });
+}
+
+function loadListView(){
+    fetch('/vues/List.html')
+    .then(r => r.text())
+    .then(r => {
+      document.querySelector("list").innerHTML = r;
+      loadList();
+    });
  
 
 }
